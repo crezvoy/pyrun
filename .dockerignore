@@ -1,0 +1,11 @@
+.gitignore
+Makefile
+.DS_Store
+.vscode
+**/venv
+**/__pycache__
+**/tests
+.dev-venv
+.venv
+.pytest_cache
+.mypy_cache

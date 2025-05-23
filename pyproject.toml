@@ -1,0 +1,41 @@
+[project]
+name = "pyrun"
+version = "0.1.0"
+description = "A service that runs python scripts"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "flask>=3.1.1",
+    "gunicorn>=23.0.0",
+    "jinja2>=3.1.6",
+    "structlog>=25.3.0",
+]
+
+[dependency-groups]
+dev = [
+    "mypy>=1.15.0",
+    "pytest-xdist>=3.6.1",
+    "ruff>=0.11.11",
+]
+
+[tool.pytest.ini_options]
+pythonpath = [
+    "."
+]
+
+[tool.pyright]
+venvPath = "."
+venv = ".venv"
+
+[tool.ruff.lint.isort]
+section-order = [
+    "future",
+    "standard-library",
+    "third-party",
+    "first-party",
+    "local-folder",
+    "tests",
+]
+
+[tool.ruff.lint.isort.sections]
+tests = ["tests"]
