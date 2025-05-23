@@ -2,7 +2,7 @@ PYTHON_VERSION ?= $(shell cat .python-version)
 VERSION ?= $(shell git rev-parse --short=8 HEAD)
 REGISTRY ?=
 
-include .env
+-include .env
 
 .PHONY: all check build test login deploy run clean check-typing check-lint
 
